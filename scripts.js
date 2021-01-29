@@ -1,3 +1,20 @@
+const handleRates = (ratesData) => {
+  const currencyList = document.querySelector('#currency-list');
+
+  const entries = Object.entries(ratesData.rates);
+
+  entries.forEach((array) => {
+    const [ currency, rate ] = array;
+
+    const formattedRate = Math.round(rate * 100) / 100;
+
+    const li = document.createElement('li');
+    li.innerHTML = `<strong>${currency}:</strong> ${formattedRate}`;
+
+    currencyList.appendChild(li);
+    console.log
+  });
+};
 
 
 const fetchCurrency = (currency) => {
