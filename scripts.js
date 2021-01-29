@@ -1,6 +1,7 @@
 const handleSearchEvent =() => {
   const searchInput = document.querySelector('#currency-input');
-  const currency = searchInput.value;
+  const currency = searchInput.value.toUpperCase();
+
   console.log('button click', currency);
 };
 
