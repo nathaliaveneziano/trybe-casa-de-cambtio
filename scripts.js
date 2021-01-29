@@ -55,9 +55,16 @@ const fetchCurrencyAsyncAwait = async (currency) => {
   }
 };
 
+const clearList = () => {
+  const currencyList = document.querySelector('#currency-list');
+  currencyList.innerHTML = '';
+}
+
 const handleSearchEvent =() => {
   const searchInput = document.querySelector('#currency-input');
   const currency = searchInput.value.toUpperCase();
+
+  clearList();
 
   // fetchCurrency(currency);
   fetchCurrencyAsyncAwait(currency);
