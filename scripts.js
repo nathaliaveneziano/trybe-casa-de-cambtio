@@ -1,5 +1,17 @@
 const handleRates = (ratesData) => {
+  const currencyList = document.querySelector('#currency-list');
 
+  const entries = Object.entries(ratesData.rates);
+
+  entries.forEach((array) => {
+    const [ currency, rate ] = array;
+
+    const li = document.createElement('li');
+    li.innerHTML = `<strong>${currency}:</strong> ${rate.toFixed(2)}`;
+
+    currencyList.appendChild(li);
+    console.log
+  });
 };
 
 const fetchCurrency = (currency) => {
